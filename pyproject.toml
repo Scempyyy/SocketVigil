@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "socketvigil"
+version = "1.0.0"
+authors = [
+  { name="Scempyyy" },
+]
+description = "Real-time application network privacy map and telemetry interceptor."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Networking :: Monitoring",
+    "Topic :: Security",
+]
+
+[project.scripts]
+socketvigil = "socketvigil.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["socketvigil*"]
